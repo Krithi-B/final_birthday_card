@@ -148,6 +148,7 @@ button {
   max-width: 800px;
   margin-bottom: 60px;
 }
+<<<<<<< HEAD
 .gallery-video {
   position: absolute;
   inset: 0;
@@ -161,6 +162,8 @@ button {
 .photo-frame:has(.gallery-video) .photo-overlay {
   pointer-events: none;
 }
+=======
+>>>>>>> d96e6ee22e7409cbfb0a889fe737dd2c4747b775
 .eyebrow {
   color: #99969a;
   font:

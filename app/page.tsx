@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
+<<<<<<< HEAD
 const GALLERY_ITEMS = [
   { type: "photo", src: "/photos/photo_1.jpeg", alt: "Photo 1" },
   { type: "photo", src: "/photos/photo_2.jpeg", alt: "Photo 2" },
@@ -18,12 +19,22 @@ const GALLERY_ITEMS = [
   { type: "photo", src: "/photos/photo_4.jpeg", alt: "Photo 4" },
   { type: "photo", src: "/photos/photo_5.jpeg", alt: "Photo 5" },
   { type: "video", src: "/photos/photo_6.mp4", alt: "video" },
+=======
+const PLACEHOLDER_PHOTOS = [
+  { src: "/photos/photo_1.jpeg", alt: "Placeholder photo 1" },
+  { src: "/photos/photo_2.jpeg", alt: "Placeholder photo 2" },
+  { src: "/photos/photo_3.jpeg", alt: "Placeholder photo 3" },
+>>>>>>> d96e6ee22e7409cbfb0a889fe737dd2c4747b775
 ];
 
 const releaseNotes = [
   "+1 year of being ridiculously wonderful",
   "Improved boyfriend capabilities",
+<<<<<<< HEAD
   "Enhanced cuteness and hotness",
+=======
+  "Enhanced memory storage for our conversations",
+>>>>>>> d96e6ee22e7409cbfb0a889fe737dd2c4747b775
   "Known issue: still impossible not to love",
 ];
 
@@ -32,7 +43,12 @@ export default function BirthdayPage() {
   const [compressed, setCompressed] = useState(false);
   const [showNotes, setShowNotes] = useState(false);
   const [showTerminal, setShowTerminal] = useState(false);
+<<<<<<< HEAD
 
+=======
+  
+  
+>>>>>>> d96e6ee22e7409cbfb0a889fe737dd2c4747b775
   // Automatically finish the boot screen.
   useEffect(() => {
     const timeout = window.setTimeout(() => {
@@ -53,6 +69,10 @@ export default function BirthdayPage() {
     return () => window.clearInterval(interval);
   }, [introComplete]);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d96e6ee22e7409cbfb0a889fe737dd2c4747b775
   const terminalLines = useMemo(
     () => [
       "$ npm run birthday",
@@ -129,11 +149,21 @@ export default function BirthdayPage() {
           animate={introComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 0.8 }}
         >
+<<<<<<< HEAD
           <p className="eyebrow"></p>
           <h1 style={{ marginTop: "10px" }}>
             Happy birthday,
             <br />
             <em>Pratikuuuu</em>
+=======
+          <p className="eyebrow">
+                      
+          </p>
+          <h1 style={{"marginTop" : "10px"}}>
+            Happy birthday,
+            <br />
+          <em>Pratikuuuu</em>
+>>>>>>> d96e6ee22e7409cbfb0a889fe737dd2c4747b775
           </h1>
           <p className="hero-subtitle">
             Somehow, 2003 has been compressed into a very handsome version 23.0
@@ -278,6 +308,7 @@ export default function BirthdayPage() {
         </div>
 
         <div className="photo-grid">
+<<<<<<< HEAD
           {GALLERY_ITEMS.map((item, index) => (
             <motion.div
               className={`photo-frame photo-${index + 1}`}
@@ -311,6 +342,23 @@ export default function BirthdayPage() {
                 <span>
                   {item.type === "video" ? `STAGE_0${index + 1}` : `STAGE_0${index + 1}`}
                 </span>
+=======
+          {PLACEHOLDER_PHOTOS.map((photo, index) => (
+            <motion.div
+              className={`photo-frame photo-${index + 1}`}
+              key={photo.src}
+              whileHover={{ y: -5 }}
+            >
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                sizes="(max-width: 700px) 90vw, 33vw"
+                className="photo-placeholder"
+              />
+              <div className="photo-overlay">
+                <span>PHOTO_0{index + 1}</span>
+>>>>>>> d96e6ee22e7409cbfb0a889fe737dd2c4747b775
               </div>
             </motion.div>
           ))}
@@ -331,6 +379,7 @@ export default function BirthdayPage() {
           <div className="message-content">
             <p className="eyebrow">03 / from me to you</p>
             <h2>A little something I wanted to tell you.</h2>
+<<<<<<< HEAD
             <p className="personal-message">
               Many more happy returns of the day mere pyaare pratikuuuuu🥳🎉. I
               wish you all the success and happiness you truly deserve, and good
@@ -343,6 +392,10 @@ export default function BirthdayPage() {
               that feeling🥰. I'm the luckiest girl to have you as my
               boyfriend✨. Khaa jaana hai tumhe, you're that cutalisious. Once
               again, happy birthday mere delicate darlingsss🤗❤️.
+=======
+            <p className="personal-message" >
+              Many more happy returns of the day mere pyaare pratikuuuuu🥳🎉. I wish you all the success and happiness you truly deserve, and good luck for all your future endeavours❤️. You're one year older, wiser, cuter, hotter and sexier now😜. Enjoy your year to the fullest. Looking forward to celebrating many more birthdays with you, kissing you at midnight and wishing you a very happy birthday🙈. Well for now, I love you soo much mere baby don😘. Tumhare birthday pe tumse zyada excited main hoti hu, and I love that feeling🥰. I'm the luckiest girl to have you as my boyfriend✨. Khaa jaana hai tumhe, you're that cutalisious. Once again, happy birthday mere delicate darlingsss🤗❤️.
+>>>>>>> d96e6ee22e7409cbfb0a889fe737dd2c4747b775
             </p>
             <div className="signature">
               — Krithu <Heart size={15} fill="currentColor" />
